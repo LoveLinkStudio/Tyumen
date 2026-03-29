@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn-primary {
+    @apply bg-gradient-to-r from-primary to-secondary text-white px-8 py-4 rounded-2xl font-semibold hover:from-primary/[.9] hover:to-secondary/[.9] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1;
+  }
+  .card {
+    @apply bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 hover:border-primary/[.3];
+  }
+  .glass {
+    @apply bg-white/[.8] backdrop-blur-xl border border-white/[.2];
+  }
+}
+
+@layer utilities {
+  .animate-fade-in { animation: fadeIn 0.5s ease-in-out; }
+  .animate-slide-up { animation: slideUp 0.3s ease-out; }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
