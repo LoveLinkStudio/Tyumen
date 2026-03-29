@@ -1,0 +1,41 @@
+{
+  "name": "tyumeni-online",
+  "private": true,
+  "version": "7.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "backend": "cd server && node server.js",
+    "fullstack": "concurrently \"npm run dev\" \"wait-on http://localhost:5000 && cd server && npm start\"",
+    "deploy": "npm run build && vercel deploy"
+  },
+  "dependencies": {
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-router-dom": "6.20.1",
+    "swiper": "11.0.5",
+    "react-hook-form": "7.48.2",
+    "@headlessui/react": "1.7.18",
+    "lucide-react": "0.294.0",
+    "axios": "1.6.2",
+    "date-fns": "2.30.0",
+    "react-hot-toast": "2.4.1",
+    "react-leaflet": "4.2.1",
+    "leaflet": "1.9.4",
+    "framer-motion": "10.16.4",
+    "@stripe/stripe-js": "^2.4.0",
+    "stripe": "^14.7.0"
+  },
+  "devDependencies": {
+    "@types/react": "18.2.37",
+    "@types/react-dom": "18.2.15",
+    "@vitejs/plugin-react": "4.2.1",
+    "autoprefixer": "10.4.16",
+    "postcss": "8.4.31",
+    "tailwindcss": "3.3.6",
+    "vite": "5.0.8",
+    "concurrently": "^8.2.2"
+  }
+}
